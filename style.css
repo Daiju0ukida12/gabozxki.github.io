@@ -1,99 +1,143 @@
- body{
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-           background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
-        }
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+/* BODY */
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+    overflow-x: hidden;
+}
 
-        h1 {
-            text-align: center;
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 40px;
-            color: #ffffff;
-            text-shadow:
-                2px 2px 6px rgba(0, 0, 0, 0.5),
-                0 0 10px rgba(255, 255, 255, 0.3),
-                0 0 20px rgba(255, 255, 255, 0.2);
-        }
+/* MENU BUTTON */
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 26px;
+    background: #111;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+}
 
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    left: -220px;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    background: #111;
+    padding-top: 60px;
+    transition: left 0.4s ease;
+}
 
-        .team {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+.sidebar.active {
+    left: 0;
+}
 
-       .card {
-            background: #000000;
-            width: 300px;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4), 0 6px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            }
+.logo {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
 
-        .card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.4);
-        }
+/* REMOVE BULLETS */
+.nav-links,
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+.nav-links li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
 
-        .card img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 6px solid #764ba2;
-            transition: transform 0.3s ease;
-        }
+.nav-links li a:hover {
+    background: #764ba2;
+}
 
-        .card:hover img {
-            transform: scale(1.1);
-        }
+/* DROPDOWN */
+.dropdown-menu {
+    display: none;
+    background: #222;
+}
 
-        .card h2 {
-            margin: 15px 0 5px;
-            color: #fff;
-        }
+.dropdown-menu li a {
+    padding-left: 40px;
+    font-size: 14px;
+}
 
-        .card h4 {
-            margin: 5px 0 15px;
-            color: #666;
-        }
+.dropdown.active .dropdown-menu {
+    display: block;
+}
 
-        .card p {
-            font-size: 14px;
-            color: #444;
-        }
+/* MAIN CONTENT */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    transition: margin-left 0.4s ease;
+}
 
-        #about {
-            text-align: center;     
-            margin: 50px auto;      
-            max-width: 800px;        
-            color: #ffffff;        
-        }
+.container.shift {
+    margin-left: 240px;
+}
 
-        #about h2 {
-            font-size: 36px;
-             margin-bottom: 15px;
-        }
+/* TITLE */
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
 
-        #about p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
+/* TEAM */
+.team {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.card {
+    background: #000;
+    width: 300px;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
 
-        footer {
-            text-align: center;
-            color: #fff;
-            margin-top: 40px;
-        }
+.card:hover {
+    transform: translateY(-12px);
+}
+
+.card img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #764ba2;
+}
+
+#about {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    color: #fff;
+    margin-top: 40px;
+}
