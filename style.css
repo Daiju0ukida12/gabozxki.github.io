@@ -1,4 +1,3 @@
-
 /* BODY */
 body{
     margin: 0;
@@ -25,7 +24,7 @@ body{
 /* SIDEBAR */
 .sidebar {
     position: fixed;
-    left: -220px; /* hidden */
+    left: -220px;
     top: 0;
     width: 220px;
     height: 100%;
@@ -44,16 +43,12 @@ body{
     margin-bottom: 30px;
 }
 
-/* REMOVE ALL BULLETS */
+/* REMOVE BULLETS */
 .nav-links,
 .dropdown-menu {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.nav-links li {
-    position: relative;
 }
 
 .nav-links li a {
@@ -99,12 +94,11 @@ body{
 h1 {
     text-align: center;
     font-size: 48px;
-    font-weight: bold;
     margin-bottom: 40px;
     color: #ffffff;
 }
 
-/* TEAM SECTION */
+/* TEAM */
 .team {
     display: flex;
     gap: 20px;
@@ -113,7 +107,7 @@ h1 {
 }
 
 .card {
-    background: #000000;
+    background: #000;
     width: 300px;
     border-radius: 12px;
     padding: 20px;
