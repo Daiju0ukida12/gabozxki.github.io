@@ -16,22 +16,22 @@
 
 <!-- SIDEBAR -->
 <div class="sidebar" id="sidebar">
-    <h2 class="logo">Menu</h2>
+    <h2 class="logo">Activity</h2>
     <ul class="nav-links">
-        <li><a href="#">Home</a></li>
+        <li><a href="https://github.com/dianarosedeguzman916-hue/netflix_blog">Act#1 Django</a></li>
 
         <li class="dropdown">
-            <a href="#" onclick="toggleDropdown(event)">Projects ▾</a>
+            <a href="#" onclick="toggleDropdown(event)">Act#2 JavaScript ▾</a>
             <ul class="dropdown-menu">
-                <li><a href="#">Project 1</a></li>
-                <li><a href="#">Project 2</a></li>
-                <li><a href="#">Project 3</a></li>
+                <li><a href="#">Frontend</a></li>
+                <li><a href="#">Backend</a></li>
+                <li><a href="https://github.com/dianarosedeguzman916-hue/Full_Stac">FullStack</a></li>
             </ul>
         </li>
 
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">Act#3 Tests and Pipelines</a></li>
+        <li><a href="#">Act#4 Deployment</a></li>
+        <li><a href="#">Final Project</a></li>
     </ul>
 </div>
 
@@ -69,8 +69,8 @@
     </footer>
 </div>
 
-<!-- JavaScript inside HTML -->
 <script>
+
 function toggleMenu() {
     document.getElementById("sidebar").classList.toggle("active");
     document.getElementById("mainContent").classList.toggle("shift");
@@ -80,6 +80,7 @@ function toggleDropdown(event) {
     event.preventDefault();
     event.target.parentElement.classList.toggle("active");
 }
+
 </script>
 
 </body>
