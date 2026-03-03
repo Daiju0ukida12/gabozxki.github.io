@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Our Team</title>
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team</title>
+
+<!-- Link CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
+<!-- MENU BUTTON -->
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+    <h2 class="logo">Menu</h2>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#" onclick="toggleDropdown(event)">Projects ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Project 1</a></li>
+                <li><a href="#">Project 2</a></li>
+                <li><a href="#">Project 3</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container" id="mainContent">
     <h1>Welcome to Our Group Website</h1>
 
     <div class="team">
-
         <div class="card">
-            <div class="img-border">
-                <img src="newlie.jpg" alt="Person 1">
-            </div>
+            <img src="newlie.jpg" alt="">
             <h2>Eurie De Guzman</h2>
             <h4>C-23-11319</h4>
         </div>
 
         <div class="card">
-            <div class="img-border">
-                <img src="yan.jpg" alt="Person 2">
-            </div>
+            <img src="yan.jpg" alt="">
             <h2>Diana Rose De Guzman</h2>
             <h4>C-23-11265</h4>
         </div>
 
         <div class="card">
-            <div class="img-border">
-                <img src="gabo.jpg" alt="Person 3">
-            </div>
+            <img src="gabo.jpg" alt="">
             <h2>Stefen Gabriell De Vera</h2>
             <h4>C-23-11519</h4>
         </div>
-
     </div>
 
     <div id="about">
@@ -48,6 +68,19 @@
         <p>&copy; 2026 ITPE 4 Activity 1 Project</p>
     </footer>
 </div>
+
+<!-- JavaScript inside HTML -->
+<script>
+function toggleMenu() {
+    document.getElementById("sidebar").classList.toggle("active");
+    document.getElementById("mainContent").classList.toggle("shift");
+}
+
+function toggleDropdown(event) {
+    event.preventDefault();
+    event.target.parentElement.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
