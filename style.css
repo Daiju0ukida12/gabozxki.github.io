@@ -2,7 +2,13 @@
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+    background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107A 29%,
+        #FF1361 67%,
+        #FFF800 100%
+    );
     overflow-x: hidden;
 }
 
@@ -18,7 +24,7 @@ body{
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 /* SIDEBAR */
@@ -31,16 +37,20 @@ body{
     background: #111;
     padding-top: 60px;
     transition: left 0.4s ease;
+    z-index: 1000;
 }
 
+/* SIDEBAR ACTIVE */
 .sidebar.active {
     left: 0;
 }
 
+/* LOGO */
 .logo {
     text-align: center;
     color: white;
     margin-bottom: 30px;
+    font-size: 28px;
 }
 
 /* REMOVE BULLETS */
@@ -51,14 +61,19 @@ body{
     margin: 0;
 }
 
+/* LINKS */
 .nav-links li a {
     display: block;
     padding: 15px 20px;
     color: white;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background 0.3s ease;
+    position: relative;
+    z-index: 1001;
+    cursor: pointer;
 }
 
+/* HOVER EFFECT */
 .nav-links li a:hover {
     background: #764ba2;
 }
@@ -69,11 +84,13 @@ body{
     background: #222;
 }
 
+/* DROPDOWN LINKS */
 .dropdown-menu li a {
     padding-left: 40px;
     font-size: 14px;
 }
 
+/* SHOW DROPDOWN */
 .dropdown.active .dropdown-menu {
     display: block;
 }
@@ -84,8 +101,11 @@ body{
     margin: 40px auto;
     padding: 20px;
     transition: margin-left 0.4s ease;
+    position: relative;
+    z-index: 1;
 }
 
+/* SHIFT CONTENT */
 .container.shift {
     margin-left: 240px;
 }
@@ -98,7 +118,7 @@ h1 {
     color: #ffffff;
 }
 
-/* TEAM */
+/* TEAM SECTION */
 .team {
     display: flex;
     gap: 20px;
@@ -106,6 +126,7 @@ h1 {
     justify-content: center;
 }
 
+/* CARD */
 .card {
     background: #000;
     width: 300px;
@@ -117,10 +138,12 @@ h1 {
     transition: transform 0.3s ease;
 }
 
+/* CARD HOVER */
 .card:hover {
     transform: translateY(-12px);
 }
 
+/* IMAGE */
 .card img {
     width: 130px;
     height: 130px;
@@ -129,6 +152,7 @@ h1 {
     border: 6px solid #764ba2;
 }
 
+/* ABOUT SECTION */
 #about {
     text-align: center;
     margin: 50px auto;
@@ -136,8 +160,26 @@ h1 {
     color: #ffffff;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     color: #fff;
     margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container.shift {
+        margin-left: 220px;
+    }
 }
