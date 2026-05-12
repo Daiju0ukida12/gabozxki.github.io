@@ -1,87 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Team</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
 
-<!-- Link CSS -->
-<link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- MENU BUTTON -->
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <!-- MENU BUTTON -->
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-<!-- SIDEBAR -->
-<div class="sidebar" id="sidebar">
-    <h2 class="logo">Activity</h2>
-    <ul class="nav-links">
-        <li><a href="https://github.com/dianarosedeguzman916-hue/netflix_blog">Act#1 Django</a></li>
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
 
-        <li class="dropdown">
-            <a href="#" onclick="toggleDropdown(event)">Act#2 JavaScript ▾</a>
-            <ul class="dropdown-menu">
-                <li><a href="https://github.com/Daiju0ukida12/frontend-.git">Frontend</a></li>
-                <li><a href="https://github.com/Daiju0ukida12/Backend_.git">Backend</a></li>
-                <li><a href="https://github.com/dianarosedeguzman916-hue/Full_Stac">FullStack</a></li>
-            </ul>
-        </li>
+        <h2 class="logo">Activity</h2>
 
-        <li><a href="#">Act#3 Tests and Pipelines</a></li>
-        <li><a href="#">Act#4 Deployment</a></li>
-        <li><a href="https://github.com/dianarosedeguzman916-hue/Ytube">Final Project</a></li>
-    </ul>
-</div>
+        <ul class="nav-links">
 
-<!-- MAIN CONTENT -->
-<div class="container" id="mainContent">
-    <h1>Welcome to Our Group Website</h1>
+            <li>
+                <a href="https://github.com/dianarosedeguzman916-hue/netflix_blog" target="_blank">
+                    Act #1 Django
+                </a>
+            </li>
 
-    <div class="team">
-        <div class="card">
-            <img src="newlie.jpg" alt="">
-            <h2>Eurie De Guzman</h2>
-            <h4>C-23-11319</h4>
-        </div>
+            <!-- DROPDOWN -->
+            <li class="dropdown">
 
-        <div class="card">
-            <img src="yan.jpg" alt="">
-            <h2>Diana Rose De Guzman</h2>
-            <h4>C-23-11265</h4>
-        </div>
+                <a href="#" onclick="toggleDropdown(event)">
+                    Act #2 JavaScript ▾
+                </a>
 
-        <div class="card">
-            <img src="gabo.jpg" alt="">
-            <h2>Stefen Gabriell De Vera</h2>
-            <h4>C-23-11519</h4>
-        </div>
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="https://github.com/Daiju0ukida12/frontend-" target="_blank">
+                            Frontend
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/Daiju0ukida12/Backend_" target="_blank">
+                            Backend
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/dianarosedeguzman916-hue/Full_Stac" target="_blank">
+                            Full Stack
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">
+                    Act #3 Tests and Pipelines
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Act #4 Deployment
+                </a>
+            </li>
+
+            <li>
+                <a href="https://github.com/dianarosedeguzman916-hue/Ytube" target="_blank">
+                    Final Project
+                </a>
+            </li>
+
+        </ul>
     </div>
 
-    <div id="about">
-        <h2>About Our Group Project</h2>
-        <p>This is our ITPE4 Activity 1 Project</p>
+    <!-- MAIN CONTENT -->
+    <div class="container" id="mainContent">
+
+        <h1>Welcome to Our Group Website</h1>
+
+        <!-- TEAM -->
+        <div class="team">
+
+            <div class="card">
+                <img src="newlie.jpg" alt="Eurie De Guzman">
+                <h2>Eurie De Guzman</h2>
+                <h4>C-23-11319</h4>
+            </div>
+
+            <div class="card">
+                <img src="yan.jpg" alt="Diana Rose De Guzman">
+                <h2>Diana Rose De Guzman</h2>
+                <h4>C-23-11265</h4>
+            </div>
+
+            <div class="card">
+                <img src="gabo.jpg" alt="Stefen Gabriell De Vera">
+                <h2>Stefen Gabriell De Vera</h2>
+                <h4>C-23-11519</h4>
+            </div>
+
+        </div>
+
+        <!-- ABOUT -->
+        <div id="about">
+            <h2>About Our Group Project</h2>
+            <p>This is our ITPE4 Activity 1 Project.</p>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2026 ITPE 4 Activity 1 Project</p>
+        </footer>
+
     </div>
 
-    <footer>
-        <p>&copy; 2026 ITPE 4 Activity 1 Project</p>
-    </footer>
-</div>
+    <!-- JAVASCRIPT -->
+    <script>
 
-<script>
+        function toggleMenu() {
 
-function toggleMenu() {
-    document.getElementById("sidebar").classList.toggle("active");
-    document.getElementById("mainContent").classList.toggle("shift");
-}
+            document.getElementById("sidebar").classList.toggle("active");
 
-function toggleDropdown(event) {
-    event.preventDefault();
-    event.target.parentElement.classList.toggle("active");
-}
+            document.getElementById("mainContent").classList.toggle("shift");
+        }
 
-</script>
+        function toggleDropdown(event) {
+
+            event.preventDefault();
+
+            const dropdown = event.currentTarget.parentElement;
+
+            dropdown.classList.toggle("active");
+        }
+
+    </script>
 
 </body>
 </html>
